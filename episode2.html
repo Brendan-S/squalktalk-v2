@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="styles/episode-list.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script> -->
+</head>
+
+
+
+
+<body>
+ <div class=titlepage data-section-name="home">
+
+<!--Boys and Booze-->
+          <div class="mainContent" id="Episode" onmouseover="colorChange()" onmouseout="colorRemove()">
+              <div class="episode1" id="title">Lights Out</div>
+
+              <div class="paragraph" id="summary">
+                <p>Things get heated in this recording! 
+                <br> Sarah, Natalie and Brendan talk about 
+                <br> love affairs in school and the haunted 
+                <br> bathroom, and other dilemas!</p>
+              </div>      
+              <!-- <audio class=audioplayer controls=controls src="sarah.mp3" type="audio/mp3"></audio> -->
+              <audio class=audioplayer controls=controls type="audio/mp3"></audio>
+
+          </div>
+              
+            <div class="next" id="nextID" onmouseover="nextColor()" onmouseout="nextRemove()">
+              
+                <div class="nextEpisode">
+                   <a href="episode3.html" id="next">next</a>
+                </div>
+              
+            </div>
+                
+            <div class="previous" id="previousID" onmouseover="previousColor()" onmouseout="previousRemove()">
+              
+                <div class="previousEpisode">
+                   <a href="episode1.html" id="previous"> previous </a>
+                </div>
+
+            </div>
+
+             <div class="home" id="homeID" onmouseover="homeColor()" onmouseout="homeRemove()">
+               <a href="episodelib.html">    
+                 <div class="mainMenue" id="home">home</div>
+               </a>
+
+            </div>
+
+
+</div>
+<script type="text/javascript" src="episodeCanvas.js"></script>
+<script type ="text/javascript" src="episode-list.js"></script>
+</body>
+
+
+</html>

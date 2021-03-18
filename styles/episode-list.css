@@ -1,0 +1,2454 @@
+
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+body{
+display:block;
+overflow:hidden;
+width:100vw; 
+height:1000px;
+}
+
+  .container{
+   position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin:0px;
+    width:100%; 
+    height:1000px;  
+}  
+
+.titlepage{    
+    position:relative;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 95%;
+    z-index:0;
+
+    display:grid; 
+    grid-template-columns: repeat(13, 110px);
+    grid-gap:10px;
+
+}
+
+
+
+
+canvas{
+position:fixed;
+margin:0;
+padding:0;
+bottom:0rem;
+overflow: hidden;
+opacity: 80%;
+z-index: -3;
+alt:"This is a an animation playing in the background of the webpage";
+}
+
+
+.pcontainter{
+position:relative;
+width:500px;
+
+
+}
+
+.paragraph{
+    left:7rem;
+    top:9rem; 
+    position:relative;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: lighter;
+    letter-spacing: .05rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    color: #FFFFFF;
+
+}
+
+
+.audioplayer{
+    position:relative;
+    top:11rem;
+    left:7rem;
+    width:500px;
+    z-index: 2;
+    
+}
+
+.imagecontainer{
+ 
+    top:5rem;
+    left:15rem;
+    position:absolute;
+    right:5rem;
+}
+
+.image1{
+    position: absolute;
+    border-radius: 50%;
+    top:40rem;
+    height:30%;
+    width:30%;
+}
+
+
+.image2{
+    position: absolute;
+    mix-blend-mode: screen;
+    border-radius: 50%;
+    top:40rem;
+    left:30rem;
+    transition: transform, ease-in-out 1s;
+    width:7.5rem;
+    height:10rem;
+}
+
+.image2:hover{
+    transform:12deg;
+}
+
+a {
+  
+color:#FFFFFF;
+  text-decoration: none;
+}
+
+
+
+
+.next{
+display:block;
+position:absolute;
+/* left:90em;   */
+  top:35rem;
+  height:7rem;
+  width:7rem;
+  background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+  border-radius: 50%;
+  border-style:dotted;
+  transition: border-color, ease-out 1s;
+  transition:top , ease-in-out 1s;
+  cursor: pointer; 
+z-index: 2;
+
+grid-column-start: 13;
+grid-column-end: 14;
+}
+
+.nextEpisode{
+  position:absolute;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: bolder;
+  left:1.55rem;
+  top:2.3rem;
+  letter-spacing: .09rem;
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  transition: color ease-in-out 1s;
+cursor: pointer;
+}
+
+
+
+.previous{
+display:block;
+position:absolute;
+top:35rem;
+ height:7rem;
+ width:7rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+  cursor: pointer; 
+z-index: 2;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+grid-column-start: 9;
+grid-column-end: 10;
+}
+
+
+.previousEpisode{
+    position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    left:.5rem;
+    top:2.3rem;
+    font-size: 1.5rem;
+    transition: color ease-in-out 1s;
+    color: #FFFFFF;
+    cursor: pointer;
+
+}
+
+
+.home{
+display:block;
+position:absolute;
+
+top:35rem;
+ height:7rem;
+ width:7rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+z-index: 2;
+
+grid-column-start: 11;
+grid-column-end: 12;
+}
+
+
+.mainMenue{
+position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    left:1.6rem;
+    top:2.3rem;
+    font-size: 1.5rem;
+    transition: color ease-in-out 1s;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+.mainContent{
+  display:inline-block;
+position:relative;
+ right:1.5rem;
+ top:2rem; 
+ height:50rem;
+ width:50rem;
+background-color:transparent;
+  border:4px;
+  border-color: #FFFFFF;
+border-radius: 50%;
+border-style:dotted;
+transition: border-color, ease-out 1s;
+transition:top , ease-in-out 1s;
+  cursor: pointer; 
+
+  grid-column-start:2;
+  grid-column-end:10;
+
+  }
+
+  
+.episode1 {
+  position:relative;
+   font-size: 8rem;
+  letter-spacing: .70rem;
+  left:6rem; 
+  top:9rem; 
+  font-family: Staatliches;
+  font-style: normal;
+  font-weight: normal;
+  transition:color, ease-in-out 1s;
+  color: #FFFFFF;
+}
+
+ /* .next:hover{
+  border-color:#EBC829;
+  color: #EBC829;
+  bottom: "2rem";
+}
+
+
+.previous:hover{
+  border-color:#EBC829;
+  bottom: "2rem";
+} 
+
+.home:hover{
+  border-color:#EBC829;
+  bottom: "2rem";
+} */
+
+
+.episode1, .mainContent:hover{
+  border-color:#EBC829;
+  bottom: 2rem;
+} 
+
+/* 
+.nextEpisode:hover{
+  color: #EBC829;
+} 
+
+.previousEpisode:hover{
+  color: #EBC829;
+}
+
+.mainMenue:hover{
+color: #EBC829;
+}
+
+
+.episode1:hover{
+  color: #EBC829;
+}  */
+
+@media screen and (max-width:5120px){
+  .titlepage{    
+    position: absolute;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 95%;
+    z-index:0;
+
+    display:grid; 
+    grid-template-columns: repeat(13, 100px);
+    grid-gap:10px;
+
+}
+
+      canvas{
+        position:fixed;
+        margin:0;
+        padding:0;
+        bottom:0rem;
+        overflow: hidden;
+        opacity: 80%;
+        z-index: -3;
+        alt:"This is a an animation playing in the background of the webpage";
+        }
+        
+        
+        .pcontainter{
+        position:relative;
+        width:500px;
+        
+        
+        }
+        
+        .paragraph{
+            left:7rem;
+            top:9rem; 
+            position:relative;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: lighter;
+            letter-spacing: .05rem;
+            line-height: 2rem;
+            font-size: 1.5rem;
+            color: #FFFFFF;
+        
+        }
+        
+        
+        .audioplayer{
+            position:relative;
+            top:11rem;
+            left:7rem;
+            width:500px;
+            z-index: 2;
+            
+        }
+        
+        .imagecontainer{
+        
+            top:5rem;
+            left:15rem;
+            position:absolute;
+            right:5rem;
+        }
+        
+        .image1{
+            position: absolute;
+            border-radius: 50%;
+            top:40rem;
+            height:30%;
+            width:30%;
+        }
+        
+        
+        .image2{
+            position: absolute;
+            mix-blend-mode: screen;
+            border-radius: 50%;
+            top:40rem;
+            left:30rem;
+            transition: transform, ease-in-out 1s;
+            width:7.5rem;
+            height:10rem;
+        }
+        
+        .image2:hover{
+            transform:12deg;
+        }
+        
+        a {
+          
+        color:#FFFFFF;
+          text-decoration: none;
+        }
+        
+        
+        
+        
+        .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:7rem;
+          width:7rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 13;
+        grid-column-end: 14;
+        }
+        
+        .nextEpisode{
+          position:absolute;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: bolder;
+          left:1.55rem;
+          top:2.3rem;
+          letter-spacing: .09rem;
+          font-size: 1.5rem;
+          color: #FFFFFF;
+          transition: color ease-in-out 1s;
+        cursor: pointer;
+        }
+        
+        
+        
+        .previous{
+        display:block;
+        position:absolute;
+        top:35rem;
+        height:7rem;
+        width:7rem;
+        background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+        border-radius: 50%;
+        border-style:dotted;
+          cursor: pointer; 
+        z-index: 2;
+        transition: border-color, ease-out 1s;
+        transition:top , ease-in-out 1s;
+        grid-column-start: 9;
+        grid-column-end: 10;
+        }
+        
+        
+        .previousEpisode{
+            position:absolute;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+            left:.5rem;
+            top:2.3rem;
+            font-size: 1.5rem;
+            transition: color ease-in-out 1s;
+            color: #FFFFFF;
+            cursor: pointer;
+        
+        }
+        
+        
+        .home{
+        display:block;
+        position:absolute;
+        
+        top:35rem;
+        height:7rem;
+        width:7rem;
+        background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+        border-radius: 50%;
+        border-style:dotted;
+        transition: border-color, ease-out 1s;
+        transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 11;
+        grid-column-end: 12;
+        }
+        
+        
+        .mainMenue{
+        position:absolute;
+            font-family: 'Open Sans', sans-serif;
+            font-style: normal;
+            font-weight: bolder;
+            left:1.6rem;
+            top:2.3rem;
+            font-size: 1.5rem;
+            transition: color ease-in-out 1s;
+            color: #FFFFFF;
+            cursor: pointer;
+        }
+        
+
+          .mainContent{
+            display:inline-block;
+            position:relative;
+            right:0rem;
+            left:1.5rem;
+            top:2rem; 
+            height:50rem;
+            width:50rem;
+            background-color:transparent;
+            border:4px;
+            border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition: border-color, ease-out 1s;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            
+              grid-column-start:1;
+              grid-column-end:9;
+            
+              }
+
+              .episode1 {
+                position:relative;
+                font-size: 8rem;
+                letter-spacing: .70rem;
+                left:6rem; 
+                top:9rem; 
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition:color, ease-in-out 1s;
+                color: #FFFFFF;
+              }
+
+              .episode1, .mainContent:hover{
+                border-color:#EBC829;
+                bottom: 2rem;
+              } 
+}
+
+@media screen and (max-width:1566px){
+    .titlepage{    
+        position: absolute;
+        height:100vh;
+        width:100%;
+        overflow: hidden;
+        background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+        opacity: 95%;
+        z-index:0;
+    
+        display:grid; 
+        grid-template-columns: repeat(13, 100px);
+        grid-gap:10px;
+    
+    }
+
+          canvas{
+            position:fixed;
+            margin:0;
+            padding:0;
+            bottom:0rem;
+            overflow: hidden;
+            opacity: 80%;
+            z-index: -3;
+            alt:"This is a an animation playing in the background of the webpage";
+            }
+            
+            
+            .pcontainter{
+            position:relative;
+            width:500px;
+            
+            
+            }
+            
+            .paragraph{
+                left:7rem;
+                top:9rem; 
+                position:relative;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: lighter;
+                letter-spacing: .05rem;
+                line-height: 2rem;
+                font-size: 1.5rem;
+                color: #FFFFFF;
+            
+            }
+            
+            
+            .audioplayer{
+                position:relative;
+                top:11rem;
+                left:7rem;
+                width:500px;
+                z-index: 2;
+                
+            }
+            
+            .imagecontainer{
+            
+                top:5rem;
+                left:15rem;
+                position:absolute;
+                right:5rem;
+            }
+            
+            .image1{
+                position: absolute;
+                border-radius: 50%;
+                top:40rem;
+                height:30%;
+                width:30%;
+            }
+            
+            
+            .image2{
+                position: absolute;
+                mix-blend-mode: screen;
+                border-radius: 50%;
+                top:40rem;
+                left:30rem;
+                transition: transform, ease-in-out 1s;
+                width:7.5rem;
+                height:10rem;
+            }
+            
+            .image2:hover{
+                transform:12deg;
+            }
+            
+            a {
+              
+            color:#FFFFFF;
+              text-decoration: none;
+            }
+            
+            
+            
+            
+            .next{
+            display:block;
+            position:absolute;
+            /* left:90em;   */
+              top:35rem;
+              height:7rem;
+              width:7rem;
+              background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+              border-radius: 50%;
+              border-style:dotted;
+              transition: border-color, ease-out 1s;
+              transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 13;
+            grid-column-end: 14;
+            }
+            
+            .nextEpisode{
+              position:absolute;
+              font-family: 'Open Sans', sans-serif;
+              font-style: normal;
+              font-weight: bolder;
+              left:1.55rem;
+              top:2.3rem;
+              letter-spacing: .09rem;
+              font-size: 1.5rem;
+              color: #FFFFFF;
+              transition: color ease-in-out 1s;
+            cursor: pointer;
+            }
+            
+            
+            
+            .previous{
+            display:block;
+            position:absolute;
+            top:35rem;
+            height:7rem;
+            width:7rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+              cursor: pointer; 
+            z-index: 2;
+            transition: border-color, ease-out 1s;
+            transition:top , ease-in-out 1s;
+            grid-column-start: 9;
+            grid-column-end: 10;
+            }
+            
+            
+            .previousEpisode{
+                position:absolute;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: bolder;
+                left:.5rem;
+                top:2.3rem;
+                font-size: 1.5rem;
+                transition: color ease-in-out 1s;
+                color: #FFFFFF;
+                cursor: pointer;
+            
+            }
+            
+            
+            .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+            height:7rem;
+            width:7rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition: border-color, ease-out 1s;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 11;
+            grid-column-end: 12;
+            }
+            
+            
+            .mainMenue{
+            position:absolute;
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: bolder;
+                left:1.6rem;
+                top:2.3rem;
+                font-size: 1.5rem;
+                transition: color ease-in-out 1s;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+            
+
+              .mainContent{
+                display:inline-block;
+                position:relative;
+                right:0rem;
+                left:1.5rem;
+                top:2rem; 
+                height:50rem;
+                width:50rem;
+                background-color:transparent;
+                border:4px;
+                border-color: #FFFFFF;
+                border-radius: 50%;
+                border-style:dotted;
+                transition: border-color, ease-out 1s;
+                transition:top , ease-in-out 1s;
+                  cursor: pointer; 
+                
+                  grid-column-start:1;
+                  grid-column-end:9;
+                
+                  }
+
+                  .episode1 {
+                    position:relative;
+                    font-size: 8rem;
+                    letter-spacing: .70rem;
+                    left:6rem; 
+                    top:9rem; 
+                    font-family: Staatliches;
+                    font-style: normal;
+                    font-weight: normal;
+                    transition:color, ease-in-out 1s;
+                    color: #FFFFFF;
+                  }
+
+                  .episode1, .mainContent:hover{
+                    border-color:#EBC829;
+                    bottom: 2rem;
+                  } 
+            
+}
+
+@media screen and (max-width:1445px) {
+    .titlepage{    
+        position: absolute;
+        height:100vh;
+        width:100%;
+        overflow: hidden;
+        background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+        opacity: 95%;
+        z-index:0;
+    
+        display:grid; 
+        grid-template-columns: repeat(13, 95px);
+        grid-gap:10px;
+    
+    }
+
+    .mainContent{
+        display:inline-block;
+        position:relative;
+        right:0rem;
+        left:1.5rem;
+        top:2rem; 
+        height:50rem;
+        width:50rem;
+        background-color:transparent;
+        border:4px;
+        border-color: #FFFFFF;
+       border-radius: 50%;
+       border-style:dotted;
+       transition: border-color, ease-out 1s;
+       transition:top , ease-in-out 1s;
+         cursor: pointer; 
+       
+         grid-column-start:1;
+         grid-column-end:9;
+       
+         }
+
+         .episode1 {
+          position:relative;
+           font-size: 8rem;
+          letter-spacing: .70rem;
+          left:6rem; 
+          top:9rem; 
+          font-family: Staatliches;
+          font-style: normal;
+          font-weight: normal;
+          transition:color, ease-in-out 1s;
+          color: #FFFFFF;
+        }
+
+        .episode1, .mainContent:hover{
+          border-color:#EBC829;
+          bottom: 2rem;
+        } 
+        
+ 
+    
+}
+
+@media screen and (max-width: 1386px) {
+    
+    .titlepage{    
+        position: absolute;
+        height:100vh;
+        width:100%;
+        overflow: hidden;
+        background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+        opacity: 95%;
+        z-index:0;
+    
+        display:grid; 
+        grid-template-columns: repeat(12, 90px);
+        grid-gap:10px;
+    
+    }
+    
+    
+    
+    
+    canvas{
+    position:fixed;
+    margin:0;
+    padding:0;
+    bottom: 0rem;
+    overflow: hidden;
+    opacity: 80%;
+    z-index: -3;
+    alt:"This is a an animation playing in the background of the webpage";
+    }
+    
+    
+    
+    .episode1 {
+        position:relative;
+         font-size: 7rem;
+        letter-spacing: .70rem;
+        left:6rem; 
+        top:9rem; 
+        font-family: Staatliches;
+        font-style: normal;
+        font-weight: normal;
+        transition:color, ease-in-out 1s;
+        color: #FFFFFF;
+       
+    
+    }
+    
+    
+    .pcontainter{
+    position:relative;
+    width:500px;
+    
+    
+    }
+    
+    .paragraph{
+        left:7rem;
+        top:9rem; 
+        position:relative;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: lighter;
+        letter-spacing: .05rem;
+        line-height: 2rem;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+    
+    }
+    
+    
+    .audioplayer{
+        position:relative;
+        top:11rem;
+        left:7rem;
+        width:500px;
+        z-index: 2;
+        
+    }
+    
+    .imagecontainer{
+     
+        top:5rem;
+        left:15rem;
+        position:absolute;
+        right:5rem;
+    }
+    
+    .image1{
+        position: absolute;
+        border-radius: 50%;
+        top:40rem;
+        height:30%;
+        width:30%;
+    }
+    
+    
+    .image2{
+        position: absolute;
+        mix-blend-mode: screen;
+        border-radius: 50%;
+        top:40rem;
+        left:30rem;
+        transition: transform, ease-in-out 1s;
+        width:7.5rem;
+        height:10rem;
+    }
+    
+    .image2:hover{
+        transform:12deg;
+    }
+    
+    /*:root {
+      --mainColor: #D9B1D8;
+    }*/
+    
+    a {
+      
+    color:#FFFFFF;
+      text-decoration: none;
+    }
+    
+    
+    .nextEpisode{
+        position:absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        left:1.55rem;
+        top:2.3rem;
+        letter-spacing: .09rem;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+      transition: color ease-in-out 1s;
+      cursor: pointer;
+    }
+    
+    .next{
+    display:block;
+    position:absolute;
+    /* left:90em;   */
+      top:30rem;
+      height:7rem;
+      width:7rem;
+      background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+      border-radius: 50%;
+      border-style:dotted;
+      /* transition: border-color, ease-out 1s;
+      transition:top , ease-in-out 1s; */
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 13;
+    grid-column-end: 14;
+    }
+    
+    .previous{
+    display:block;
+    position:absolute;
+    top:30rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 9;
+    grid-column-end: 10;
+    }
+    
+    
+    .previousEpisode{
+        position:absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        left:.5rem;
+        top:2.3rem;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        cursor: pointer;
+    
+    }
+    
+    
+    .home{
+    display:block;
+    position:absolute;
+    
+    top:30rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+    transition:top , ease-in-out 1s;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 11;
+    grid-column-end: 12;
+    }
+    
+    
+    .mainMenue{
+    position:absolute;
+        font-family: 'Open Sans', sans-serif;
+        font-style: normal;
+        font-weight: bolder;
+        left:1.6rem;
+        top:2.3rem;
+        font-size: 1.5rem;
+        color: #FFFFFF;
+        cursor: pointer;
+    }
+    
+    .mainContent{
+      display:inline-block;
+    position:relative;
+     right:0rem;
+     top:2rem; 
+     height:45rem;
+     width:45rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+    transition: border-color, ease-out 1s;
+    transition:top , ease-in-out 1s;
+      cursor: pointer; 
+    
+      grid-column-start:1;
+      grid-column-end:10;
+    
+      }
+    
+    .mainContent:hover{
+      border-color:#EBC829;
+      bottom:0.5rem;
+    }
+    
+}
+
+
+@media screen and (max-width: 1320px) {
+ 
+    .titlepage{    
+        position: relative;
+        height:100vh;
+        width:100%;
+        overflow: hidden;
+        background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+        opacity: 95%;
+        z-index:0;
+    
+        display:grid; 
+        grid-template-columns: repeat(12, 95px);
+        /* grid-template-rows:repeat(2,1fr); */
+        grid-gap:10px;
+    
+    }
+
+    canvas{
+        position:fixed;
+        margin:0;
+        padding:0;
+        bottom:0rem;
+        overflow: hidden;
+        opacity: 80%;
+        z-index: -1;
+        alt:"This is a an animation playing in the background of the webpage";
+        grid-column-start: 1;
+        grid-column-end: 13;
+        }
+
+    .previous{
+        display:block;
+        position:absolute;
+        top:35rem;
+         height:7rem;
+         width:7rem;
+        background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+        border-radius: 50%;
+        border-style:dotted;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 4;
+        grid-column-end: 5;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+        
+        .next{
+            display:block;
+            position:absolute;
+            /* left:90em;   */
+              top:35rem;
+              height:7rem;
+              width:7rem;
+              background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+              border-radius: 50%;
+              border-style:dotted;
+              transition: border-color, ease-out 1s;
+              transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 8;
+            grid-column-end: 9;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .home{
+                display:block;
+                position:absolute;
+                
+                top:35rem;
+                 height:7rem;
+                 width:7rem;
+                background-color:transparent;
+                  border:4px;
+                  border-color: #FFFFFF;
+                border-radius: 50%;
+                border-style:dotted;
+                transition:top , ease-in-out 1s;
+                  cursor: pointer; 
+                z-index: 2;
+                
+                grid-column-start: 6;
+                grid-column-end: 7;
+                /* grid-row-start: 2;
+                grid-row-end:3 ; */
+                }
+                
+                .mainMenue{
+                    position:absolute;
+                        font-family: 'Open Sans', sans-serif;
+                        font-style: normal;
+                        font-weight: bolder;
+                        left:1.6rem;
+                        top:2.3rem;
+                        font-size: 1.5rem;
+                        color: #FFFFFF;
+                        cursor: pointer;
+                    }
+
+
+                      
+                .episode1 {
+                    position: relative;
+                    font-size: 5rem;
+                    letter-spacing: .60rem;
+                    top: 1rem;
+                    /* left: 0rem; */
+                    /* bottom: 9rem; */
+                    font-family: Staatliches;
+                    font-style: normal;
+                    font-weight: normal;
+                    transition: color, ease-in-out 1s;
+                    color: #FFFFFF;
+                    width: 500px;
+                
+                
+                }
+                    
+                .mainContent{
+                    display: flex;
+                    flex-flow: column;
+                    position: relative;
+                    right: 0rem;
+                    top: 2rem;
+                    height: 28rem;
+                    width: 45rem;
+                    background-color: transparent;
+                    border: 4px;
+                    border-color: #FFFFFF;
+                    border-radius: 30px;
+                    border-style: dotted;
+                    transition: border-color, ease-out 1s;
+                    transition: top , ease-in-out 1s;
+                    cursor: pointer;
+
+                    grid-column-start: 3;
+                    grid-column-end: 12;
+                    /* grid-row-start: 1;
+                    grid-row-end: 2; */
+
+                  
+                    }
+
+                    .paragraph{
+                        left: 7rem;
+                        top: 2rem;
+                        position: relative;
+                        font-family: 'Open Sans', sans-serif;
+                        font-style: normal;
+                        font-weight: lighter;
+                        letter-spacing: .05rem;
+                        line-height: 2rem;
+                        font-size: 1.3rem;
+                        color: #FFFFFF;
+                    
+                    }
+                    
+                    
+                    .audioplayer{
+                        position: relative;
+                        top: 4rem;
+                        left: 7rem;
+                        width: 500px;
+                        z-index: 2;
+                    }
+
+}
+
+@media screen and (max-width:1190px) {
+  
+  .titlepage{    
+    position: relative;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 95%;
+    z-index:0;
+
+    display:grid; 
+    grid-template-columns: repeat(11, 1fr);
+    /* grid-template-rows:repeat(2,1fr); */
+    grid-gap:10px;
+
+}
+
+canvas{
+    position:fixed;
+    margin:0;
+    padding:0;
+    bottom:0rem;
+    overflow: hidden;
+    opacity: 80%;
+    z-index: -1;
+    alt:"This is a an animation playing in the background of the webpage";
+    grid-column-start: 1;
+    grid-column-end: 13;
+    }
+
+.previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; */
+    }
+    
+    .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:7rem;
+          width:7rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 8;
+        grid-column-end: 11;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:7rem;
+             width:7rem;
+             left:2rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 5;
+            grid-column-end: 7;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.6rem;
+                    top:2.3rem;
+                    font-size: 1.5rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+
+                  
+            .episode1 {
+                position: relative;
+                font-size: 5rem;
+                letter-spacing: .60rem;
+                top: 1rem;
+                /* left: 0rem; */
+                /* bottom: 9rem; */
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 500px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+                position: relative;
+                right: 0rem;
+                left:3rem;
+                top: 2rem;
+                height: 28rem;
+                width: 45rem;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start: 2;
+                grid-column-end: 11;
+                /* grid-row-start: 1;
+                grid-row-end: 2; */
+
+              
+                }
+
+                .paragraph{
+                    left: 7rem;
+                    top: 2rem;
+                    position: relative;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: lighter;
+                    letter-spacing: .05rem;
+                    line-height: 2rem;
+                    font-size: 1.3rem;
+                    color: #FFFFFF;
+                
+                }
+                
+                
+                .audioplayer{
+                    position: relative;
+                    top: 4rem;
+                    left: 7rem;
+                    width: 500px;
+                    z-index: 2;
+                }
+
+}
+
+@media screen and (max-width: 1084px) {
+
+  .titlepage{    
+    position: relative;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 95%;
+    z-index:0;
+
+    display:grid; 
+    grid-template-columns: repeat(11, 90px);
+    /* grid-template-rows:repeat(2,1fr); */
+    grid-gap:10px;
+
+}
+  .previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 3;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; */
+    }
+    
+    .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:7rem;
+          width:7rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 8;
+        grid-column-end: 11;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:7rem;
+             width:7rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 5;
+            grid-column-end: 7;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.6rem;
+                    top:2.3rem;
+                    font-size: 1.5rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+
+                  
+            .episode1 {
+                position: relative;
+                font-size: 5rem;
+                letter-spacing: .60rem;
+                top: 1rem;
+                /* left: 0rem; */
+                /* bottom: 9rem; */
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 500px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+                position: relative;
+                right: 0rem;
+                top: 2rem;
+                height: 28rem;
+                width: 45rem;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start: 2;
+                grid-column-end: 12;
+                /* grid-row-start: 1;
+                grid-row-end: 2; */
+
+              
+                }
+}
+
+@media screen and (max-width: 890px) {
+  .titlepage{    
+    position: relative;
+    height:100vh;
+    width:100%;
+    overflow: hidden;
+    background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+    opacity: 95%;
+    z-index:0;
+
+    display:grid; 
+    grid-template-columns: repeat(10, 1.5fr);
+    /* grid-template-rows:repeat(2,1fr); */
+    grid-gap:10px;
+
+}
+  .previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; */
+    }
+    
+    .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:7rem;
+          width:7rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 7;
+        grid-column-end: 11;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:7rem;
+             width:7rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 4;
+            grid-column-end: 7;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.6rem;
+                    top:2.3rem;
+                    font-size: 1.5rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+
+                  
+            .episode1 {
+                position: relative;
+                font-size: 5rem;
+                letter-spacing: .60rem;
+                top: 1rem;
+                /* left: 0rem; */
+                /* bottom: 9rem; */
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 500px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+                position: relative;
+                right: 0rem;
+                top: 2rem;
+                height: 28rem;
+                width: 100%;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start:1;
+                grid-column-end: 9;
+                /* grid-row-start: 1;
+                grid-row-end: 2; */
+
+              
+                }
+}
+
+@media screen and (max-width: 790px) {
+  .previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:7rem;
+     width:7rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; */
+    }
+    
+    .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:7rem;
+          width:7rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 7;
+        grid-column-end: 11;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:7rem;
+             width:7rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 4;
+            grid-column-end: 7;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.6rem;
+                    top:2.3rem;
+                    font-size: 1.5rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+                .audioplayer{
+                  position: relative;
+                  top: 4rem;
+                  left: 7rem;
+                  width: 400px;
+                  z-index: 2;
+              }
+
+
+                .paragraph{
+                  left:7rem;
+                  top:2rem; 
+                  position:relative;
+                  font-family: 'Open Sans', sans-serif;
+                  font-style: normal;
+                  font-weight: lighter;
+                  letter-spacing: .05rem;
+                  line-height: 1.5rem;
+                  font-size: 1rem;
+                  color: #FFFFFF;
+              
+              }
+                  
+            .episode1 {
+                position: relative;
+                font-size: 5rem;
+                letter-spacing: .60rem;
+                top: 1rem;
+                left: 7rem; 
+                /* bottom: 9rem; */
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 500px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+                position: relative;
+                right: 0rem;
+                top: 2rem;
+                height: 28rem;
+                width: 100%;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start:1;
+                grid-column-end: 9;
+                /* grid-row-start: 1;
+                grid-row-end: 2; */
+
+              
+                }
+}
+
+@media screen and (max-width: 670px) {
+  .previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:6rem;
+     width:6rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; */
+    }
+
+    .previousEpisode{
+      position:absolute;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: bolder;
+      left:.6rem;
+      top:2.3rem;
+      font-size: 1.2rem;
+      transition: color ease-in-out 1s;
+      color: #FFFFFF;
+      cursor: pointer;
+  
+  }
+    
+    .next{
+        display:block;
+        position:absolute;
+        /* left:90em;   */
+          top:35rem;
+          height:6rem;
+          width:6rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 7;
+        grid-column-end: 11;
+        /* grid-row-start: 2;
+        grid-row-end:3 ; */
+        }
+
+        .nextEpisode{
+          position:absolute;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: bolder;
+          left:1.5rem;
+          top:2.2rem;
+          letter-spacing: .09rem;
+          font-size: 1.2rem;
+          color: #FFFFFF;
+          transition: color ease-in-out 1s;
+        cursor: pointer;
+        }
+        
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:6rem;
+             width:6rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 4;
+            grid-column-end: 7;
+            /* grid-row-start: 2;
+            grid-row-end:3 ; */
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.3rem;
+                    top:2.3rem;
+                    font-size: 1.2rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+                .audioplayer{
+                  align-self:center;
+                  position: relative;
+                  top: 4rem;
+                  left: 0rem;
+                  width: 400px;
+                  z-index: 2;
+              }
+
+
+                .paragraph{
+                  align-self: center;
+                  position:relative;
+                  left:0rem;
+                  top:2rem; 
+                  font-family: 'Open Sans', sans-serif;
+                  font-style: normal;
+                  font-weight: lighter;
+                  letter-spacing: .05rem;
+                  line-height: 1.5rem;
+                  font-size: 1rem;
+                  color: #FFFFFF;
+              
+              }
+                  
+            .episode1 {
+              align-self: center;
+                position: relative;
+                font-size: 4rem;
+                letter-spacing: .60rem;
+                top: 1rem;
+                left: 3rem; 
+                /* bottom: 9rem; */
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 500px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+              
+                position: relative;
+                right: 0rem;
+                top: 2rem;
+                height: 28rem;
+                width: 100%;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start:1;
+                grid-column-end: 9;
+                /* grid-row-start: 1;
+                grid-row-end: 2; */
+
+              
+                }
+}
+/*was originally the 320 media query section*/ 
+@media screen and (max-width: 520px) {
+  .titlepage{    
+      position: relative;
+      height:100vh;
+      width:100%;
+      overflow: hidden;
+      background: linear-gradient(350deg, rgba(84,115,224,1) 0%, rgba(86,188,194,1) 100%);
+      opacity: 95%;
+      z-index:0;
+  
+      display:grid; 
+      grid-template-columns: repeat(10, 1.5fr);
+      /* grid-template-rows:repeat(1,1fr); */
+      grid-gap:10px;
+  }
+  
+  .previous{
+    display: block;
+    position: relative;
+    top: 0rem;
+    height: 4rem;
+    width: 100%;
+    background-color: transparent;
+    border: 4px;
+    border-color: #FFFFFF;
+    border-radius: 20px;
+    border-style: dotted;
+    cursor: pointer;
+    z-index: 2;
+    grid-column-start: 2;
+    grid-column-end: 10;
+    }
+
+    .previousEpisode{
+      position:absolute;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: bolder;
+      left:8.5rem;
+      top:0.5rem;
+      font-size: 1.9rem;
+      transition: color ease-in-out 1s;
+      color: #FFFFFF;
+      cursor: pointer;
+  
+  }
+    
+    .next{
+      display: block;
+      position: relative;
+      right: 0rem;
+      left: 0rem;
+      top: 1rem;
+      height:4rem;
+      width: 100%;
+      background-color: transparent;
+      border: 4px;
+      border-color: #FFFFFF;
+      border-radius: 20px;
+      border-style: dotted;
+      transition: border-color, ease-out 1s;
+      transition: top , ease-in-out 1s;
+      cursor: pointer;
+      z-index: 2;
+      grid-column-start: 2;
+      grid-column-end: 10;
+        }
+
+        .nextEpisode{
+          position:absolute;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: bolder;
+          left:9.8rem;
+          top:0.5rem;
+          font-size: 1.9rem;
+          letter-spacing: .09rem;
+          color: #FFFFFF;
+          transition: color ease-in-out 1s;
+        cursor: pointer;
+        }
+        
+        .home{
+          display: block;
+          position: relative;
+          top: 0rem;
+          left: 0rem;
+          right: 0;
+          height: 4rem;
+          width: 100%;
+          background-color: transparent;
+          border: 4px;
+          border-color: #FFFFFF;
+          border-radius: 20px;
+          border-style: dotted;
+          transition: top , ease-in-out 1s;
+          cursor: pointer;
+          z-index: 2;
+          grid-column-start: 2;
+          grid-column-end: 10;
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:9.5rem;
+                    top:0.5rem;
+                    font-size: 1.9rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+  
+                .audioplayer{
+                  position: relative;
+                  top: 4rem;
+                  left:0rem;
+                  width: 350px;
+                  z-index: 2;
+              }
+  
+  
+              .paragraph{
+                align-self: center;
+                position:relative;
+                left:0rem;
+                top:2rem; 
+                font-family: 'Open Sans', sans-serif;
+                font-style: normal;
+                font-weight: lighter;
+                letter-spacing: .05rem;
+                line-height: 1.5rem;
+                font-size: 0.85rem;
+                color: #FFFFFF;
+            
+            }
+                  
+              .episode1 {
+                align-self: center;
+                  position: relative;
+                  font-size: 3.8rem;
+                  letter-spacing: .50rem;
+                  top: 1rem;
+                  left: 1.8rem; 
+                  bottom: 9rem; 
+                  font-family: Staatliches;
+                  font-style: normal;
+                  font-weight: normal;
+                  transition: color, ease-in-out 1s;
+                  color: #FFFFFF;
+                  width: 400px;
+              
+              
+              }
+                
+            .mainContent{
+              display: flex;
+              flex-flow: column;
+            
+              position: relative;
+              right: 0rem;
+              top: 2rem;
+              height: 28rem;
+              width: 100%;
+              background-color: transparent;
+              border: 4px;
+              border-color: #FFFFFF;
+              border-radius: 30px;
+              border-style: dotted;
+              transition: border-color, ease-out 1s;
+              transition: top , ease-in-out 1s;
+              cursor: pointer;
+
+              grid-column-start:1;
+              grid-column-end: 9;
+              grid-row-start: 1;
+              grid-row-end: 2; 
+
+            
+              }
+    }
+  
+
+/*  keep extra code below, was originally 520px media queries
+@media screen and (max-width: 520px) {
+  .previous{
+    display:block;
+    position:absolute;
+    top:35rem;
+     height:6rem;
+     width:6rem;
+    background-color:transparent;
+      border:4px;
+      border-color: #FFFFFF;
+    border-radius: 50%;
+    border-style:dotted;
+      cursor: pointer; 
+    z-index: 2;
+    
+    grid-column-start: 2;
+    grid-column-end: 5;
+    /* grid-row-start: 2;
+    grid-row-end:3 ; 
+    }
+
+    .previousEpisode{
+      position:absolute;
+      font-family: 'Open Sans', sans-serif;
+      font-style: normal;
+      font-weight: bolder;
+      left:.6rem;
+      top:2.3rem;
+      font-size: 1.2rem;
+      transition: color ease-in-out 1s;
+      color: #FFFFFF;
+      cursor: pointer;
+  
+  }
+    
+    .next{
+        display:block;
+        position:absolute;
+        // left:90em;   //
+          top:35rem;
+          height:6rem;
+          width:6rem;
+          background-color:transparent;
+          border:4px;
+          border-color: #FFFFFF;
+          border-radius: 50%;
+          border-style:dotted;
+          transition: border-color, ease-out 1s;
+          transition:top , ease-in-out 1s;
+          cursor: pointer; 
+        z-index: 2;
+        
+        grid-column-start: 7;
+        grid-column-end: 11;
+        // grid-row-start: 2;
+        grid-row-end:3 ; //
+        }
+
+        .nextEpisode{
+          position:absolute;
+          font-family: 'Open Sans', sans-serif;
+          font-style: normal;
+          font-weight: bolder;
+          left:1.5rem;
+          top:2.2rem;
+          letter-spacing: .09rem;
+          font-size: 1.2rem;
+          color: #FFFFFF;
+          transition: color ease-in-out 1s;
+        cursor: pointer;
+        }
+        
+        
+        .home{
+            display:block;
+            position:absolute;
+            
+            top:35rem;
+             height:6rem;
+             width:6rem;
+            background-color:transparent;
+              border:4px;
+              border-color: #FFFFFF;
+            border-radius: 50%;
+            border-style:dotted;
+            transition:top , ease-in-out 1s;
+              cursor: pointer; 
+            z-index: 2;
+            
+            grid-column-start: 4;
+            grid-column-end: 7;
+            // grid-row-start: 2;
+            grid-row-end:3 ; //
+            }
+            
+            .mainMenue{
+                position:absolute;
+                    font-family: 'Open Sans', sans-serif;
+                    font-style: normal;
+                    font-weight: bolder;
+                    left:1.3rem;
+                    top:2.3rem;
+                    font-size: 1.2rem;
+                    color: #FFFFFF;
+                    cursor: pointer;
+                }
+
+                .audioplayer{
+                  align-self:center;
+                  position: relative;
+                  top: 4rem;
+                  left: 0rem;
+                  width: 300px;
+                  z-index: 2;
+              }
+
+
+                .paragraph{
+                  align-self: center;
+                  position:relative;
+                  left:0rem;
+                  top:2rem; 
+                  font-family: 'Open Sans', sans-serif;
+                  font-style: normal;
+                  font-weight: lighter;
+                  letter-spacing: .05rem;
+                  line-height: 1.5rem;
+                  font-size: 0.85rem;
+                  color: #FFFFFF;
+              
+              }
+                  
+            .episode1 {
+              align-self: center;
+                position: relative;
+                font-size: 4rem;
+                letter-spacing: .50rem;
+                top: 1rem;
+                left: 2.8rem; 
+                // bottom: 9rem; //
+                font-family: Staatliches;
+                font-style: normal;
+                font-weight: normal;
+                transition: color, ease-in-out 1s;
+                color: #FFFFFF;
+                width: 400px;
+            
+            
+            }
+                
+            .mainContent{
+                display: flex;
+                flex-flow: column;
+              
+                position: relative;
+                right: 0rem;
+                top: 2rem;
+                height: 28rem;
+                width: 100%;
+                background-color: transparent;
+                border: 4px;
+                border-color: #FFFFFF;
+                border-radius: 30px;
+                border-style: dotted;
+                transition: border-color, ease-out 1s;
+                transition: top , ease-in-out 1s;
+                cursor: pointer;
+
+                grid-column-start:1;
+                grid-column-end: 9;
+                // grid-row-start: 1;
+                grid-row-end: 2; /
+
+              
+                }
+} */
+
+
+

@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="styles/episode-list.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script> -->
+</head>
+
+
+<body>
+  <!-- <div class="container"> -->
+          <div class=titlepage data-section-name="home">
+
+              <div class="mainContent" id="Episode" onmouseover="colorChange()" onmouseout="colorRemove()">
+                  <div class="episode1" id="title">art school adventure </div>
+                  <div class="paragraph" id="summary">
+                    <p>Natalie and Brendan discuss life, art school, 
+                    <br>homework, and the creation of our new podcast. 
+                    <br>The wonderful adventure begins!</p>
+                  </div>      
+                  <!-- <audio class=audioplayer controls=controls src="brendanNatalie.mp3" type="audio/mp3"></audio> -->
+                  <audio class=audioplayer controls=controls type="audio/mp3"></audio>
+              </div>
+
+            <div class="next" id="nextID" onmouseover="nextColor()" onmouseout="nextRemove()">
+               <a href="episode2.html">
+                 <div class="nextEpisode"  id="next">next</div>
+              </a>
+            </div>
+                
+            <div class="previous" id="previousID" onmouseover="previousColor()" onmouseout="previousRemove()">
+              <a href="episode7.html">    
+                <div class="previousEpisode" id="previous">previous</div>
+              </a>
+            </div>
+
+             <div class="home" id="homeID" onmouseover="homeColor()" onmouseout="homeRemove()">
+               <a href="episodelib.html">    
+                <div class="mainMenue" id="home">home</div>
+              </a>
+            </div>
+         </div>
+      <!-- </div>   -->
+
+<script type="text/javascript" src="episodeCanvas.js"></script> 
+<script type="text/javascript" src="episode-list.js"></script>
+</body>
+
+
+
+</html>

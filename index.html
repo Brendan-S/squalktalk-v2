@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width,initial-scale=1"> 
+	<link href="https://fonts.googleapis.com/css?family=Staatliches&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="styles/landing_Page.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js" integrity="sha256-B/HdsqG8ejlPGk/2bEOHlCBCAcBynY0nmh9hrhOwqtQ=" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+  <div class="container" >
+
+      <div class="titlepage">
+            <div class=squawk>SQUAWK</div>
+            <div class=talk>TALK</div>
+            <div class=subtitle>The Art School Podcast</div>
+            <div class="info"  data-aos="fade-down" data-aos-anchor-placement="bottom-bottom" >
+              What is Squawk Talk? Squawk Talk is the leading art school podcast hosted by none other than 
+              Natalie and Brendan from RISD's illustration department. <br> <br>We update our audience with 
+              the latest bits of information on life at Art school. As students, the art school lifestyle 
+              is our bread and butter, our episodes are rich with information <br>you won't find elsewhere!
+            </div>
+
+            <div class="circle1"></div> 
+
+            <a href="episodelib.html" class="continue">
+              <div class="text-container" onmouseover="wordColor()" onmouseout="colorRemove()">
+                <div class="episodelist" >
+                  <p id="archive">archive</p>
+                </div>
+              </div>
+            </a>
+       </div>
+  </div><!--End of Container-->
+
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+<script>
+      AOS.init({
+        easing: 'ease-in-out-sine'
+      });
+</script>
+
+<script type="text/javascript" src="canvas.js"></script> 
+<script type="text/javascript" src="landing_Page.js"></script>
+
+</body>
+</html>
